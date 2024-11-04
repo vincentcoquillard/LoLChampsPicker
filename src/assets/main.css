@@ -1,0 +1,66 @@
+@import './base.css';
+@font-face {
+  font-family: 'Holen';
+  src: url(../assets/fonts/Holen_Vintage.otf);
+}
+
+*{
+  color: blanchedalmond;
+}
+
+#app {
+  height: 100vh;
+  overflow: hidden;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+  font-family: 'Holen';
+  background: rgb(57, 55, 55);
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: rgb(245, 214, 112);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+.start {
+  background-color: rgb(73, 6, 92, 0.2);
+  color: blanchedalmond;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-top: 1rem;
+  border: solid 2px rgb(196, 157, 206);
+  transition: all ease-in-out 0.2s;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: rgb(73, 6, 92, 0.2);
+  }
+
+  .start:hover {
+    background-color: rgba(200, 0, 255, 0.2);
+    scale: 1.05;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+  }
+}
