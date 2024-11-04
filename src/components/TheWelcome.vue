@@ -2,7 +2,7 @@
 import { ref, onMounted } from 'vue'
 import ChampItem from './ChampItem.vue'
 
-const champions = ref<Record<string, unknown>>({})
+const champions = ref<Record<string, any>>({})
 
 onMounted(async () => {
   const response = await fetch(

@@ -9,7 +9,7 @@ async function fetchChampions() {
   const response = await fetch('https://ddragon.leagueoflegends.com/cdn/9.18.1/data/en_US/champion.json');
   const data = await response.json();
   champions.value = Object.values(data.data).map(
-    (champion: unknown) => `https://ddragon.leagueoflegends.com/cdn/9.18.1/img/champion/${champion.image.full}`
+    (champion: any) => `https://ddragon.leagueoflegends.com/cdn/9.18.1/img/champion/${champion.image.full}`
   );
   startRoll();
 }
